@@ -6,7 +6,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 
 import { CompanyRoutingModule } from "./company-routing.module";
 import { CompanyComponent } from "./company.component";
-import { filterPipe } from "../../common";
+import { CommonModule } from "../../common";
 import { EditCompanyComponent } from "./edit-company.component";
 
 @NgModule({
@@ -15,9 +15,10 @@ import { EditCompanyComponent } from "./edit-company.component";
     NativeScriptHttpClientModule,
     NativeScriptUIDataFormModule,
     CompanyRoutingModule,
-    NativeScriptUIListViewModule
+    NativeScriptUIListViewModule,
+    CommonModule
   ],
-  declarations: [CompanyComponent, EditCompanyComponent, filterPipe],
+  declarations: [CompanyComponent, EditCompanyComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class CompanyModule {}

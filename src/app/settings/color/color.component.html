@@ -21,9 +21,9 @@
 
         <ListView row="1" [items]="colorList | filter:searchText:'name'" class="list-group">
             <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
-                <StackLayout orientation="horizontal" class="list-group-item" [class.odd]="odd" [class.even]="even">
+                <StackLayout orientation="horizontal" class="list-group-item" (tap)="editItem(item)"
+                    [class.odd]="odd" [class.even]="even">
                     <Label [text]="item.name" textWrap="true"></Label>
-                    <Button class="btn" pageTransition="slide" text="&#xf044;" (tap)="editItem(item)"></Button>
                 </StackLayout>
             </ng-template>
         </ListView>

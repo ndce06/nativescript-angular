@@ -5,16 +5,17 @@ import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
 import { SettingsRoutingModule } from "./settings-routing.module";
 import { SettingsComponent } from "./settings.component";
-import { filterPipe } from "../common";
+import { CommonModule } from "../common";
 
 @NgModule({
   imports: [
     NativeScriptCommonModule,
     NativeScriptHttpClientModule,
     SettingsRoutingModule,
-    NativeScriptUIListViewModule
+    NativeScriptUIListViewModule,
+    CommonModule
   ],
-  declarations: [SettingsComponent, filterPipe],
+  declarations: [SettingsComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class SettingsModule {}

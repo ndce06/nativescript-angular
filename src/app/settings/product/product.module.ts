@@ -3,10 +3,11 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
+import { DropDownModule } from "nativescript-drop-down/angular";
 
 import { ProductRoutingModule } from "./product-routing.module";
 import { ProductComponent } from "./product.component";
-import { filterPipe } from "../../common";
+import { CommonModule } from "../../common";
 import { EditProductComponent } from "./edit-product.component";
 
 @NgModule({
@@ -15,9 +16,11 @@ import { EditProductComponent } from "./edit-product.component";
     NativeScriptHttpClientModule,
     NativeScriptUIDataFormModule,
     ProductRoutingModule,
-    NativeScriptUIListViewModule
+    NativeScriptUIListViewModule,
+    CommonModule,
+    DropDownModule
   ],
-  declarations: [ProductComponent, EditProductComponent, filterPipe],
+  declarations: [ProductComponent, EditProductComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class ProductModule {}

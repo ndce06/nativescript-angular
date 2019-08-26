@@ -6,7 +6,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 
 import { ColorRoutingModule } from "./color-routing.module";
 import { ColorComponent } from "./color.component";
-import { filterPipe } from "../../common";
+import { CommonModule } from "../../common";
 import { EditColorComponent } from "./edit-color.component";
 
 @NgModule({
@@ -15,9 +15,10 @@ import { EditColorComponent } from "./edit-color.component";
     NativeScriptHttpClientModule,
     NativeScriptUIDataFormModule,
     ColorRoutingModule,
-    NativeScriptUIListViewModule
+    NativeScriptUIListViewModule,
+    CommonModule
   ],
-  declarations: [ColorComponent, EditColorComponent, filterPipe],
+  declarations: [ColorComponent, EditColorComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class ColorModule {}
